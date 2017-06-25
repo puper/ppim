@@ -1,0 +1,26 @@
+// protoc --gogofaster_out=. *.proto
+syntax = "proto3";
+
+package front;
+
+option go_package = "github.com/puper/ppim/proto/front";
+
+import "base/base.proto";
+
+
+message AuthArgs {
+	string userId = 1;
+	string platform = 2;
+	string token = 3;
+}
+
+message AuthReply {
+	base.Error error = 1;
+}
+
+message QuitArgs {
+}
+
+message QuitReply {
+	base.Error error = 1;
+}

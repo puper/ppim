@@ -1,0 +1,11 @@
+// protoc --gogofaster_out=. *.proto
+syntax = "proto3";
+
+package base;
+
+option go_package = "github.com/puper/ppim/proto/base";
+
+message Error {
+	int32 code = 1;
+	string message = 2;
+}

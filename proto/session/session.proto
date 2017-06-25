@@ -1,0 +1,28 @@
+// protoc --gogofaster_out=. *.proto
+syntax = "proto3";
+
+package session;
+
+option go_package = "github.com/puper/ppim/proto/session";
+
+import "base/base.proto";
+
+message PutArgs {
+	string userId = 1;
+	string platform = 2;
+	string connectionId = 3;
+}
+
+message PutReply {
+	base.Error error = 1;
+}
+
+message DelArgs {
+	string userId = 1;
+	string platform = 2;
+	string connectionId = 3;
+}
+
+message DelReply {
+	base.Error error = 1;
+}
